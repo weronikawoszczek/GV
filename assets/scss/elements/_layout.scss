@@ -1,0 +1,88 @@
+body {
+  font-size: $baseSize+px;
+  font-family: $font-secondary;
+  color: $main;
+  line-height: 140%;
+  background: url(../img/bgbg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.page-limiter {
+  display: flex;
+  max-width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+// responsive images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// links
+a {
+  color: $aux-darker;
+  text-decoration: none;
+  @include makeRem(15);
+  @include animate;
+
+  &:hover, &:focus, &:active {
+    color: $main--light;
+    @include animate;
+    text-decoration: none;
+  }
+}
+
+// whitespace
+.clearspace {
+  clear: both;
+
+  &LG {
+    height: $whitespace*2;
+  }
+
+  &SM {
+    height: $whitespace;
+  }
+}
+
+//text alignements
+$alignments: left, center, right;
+@each $align in $alignments {
+  .text--#{$align} {
+    text-align: $align;
+  }
+}
+
+// headings
+@for $i from 1 through 6 {
+  h#{$i} {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+h1 {
+  @include makeRem(70);
+}
+
+h3 {
+  @include makeRem(60);
+  @include media-breakpoint-down(sm) {
+    font-size: 3.2rem;
+  }
+}
+
+span {
+  @include makeRem(17);
+}
+
+p {
+  @include makeRem(12);
+}
+

@@ -1,0 +1,43 @@
+.btn-class {
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid $aux-darker;
+    padding: .7rem 1.5rem;
+    @include makeRem(15);
+    border-radius: 5px;
+    background-color: #fff;
+    color: $aux-darker;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    margin: 10px 0 15px;
+    font-size: 13px;
+    min-width: 120px;
+    &:hover, &:focus, &:active {
+        background-color: $aux-light;
+    }
+    @include media-breakpoint-down(sm) {
+        width: 300px;
+    }
+
+    &.alert{
+        background-color: $accent;
+        color: $main--dark;
+        font-weight: bold;
+        border: 2px solid $main--dark;
+        box-shadow: 5px 5px 20px -5px $main--dark;
+        &:hover, &:focus, &:active {
+            background-color: rgba(171, 233, 187, 0.8);
+        }
+    }
+
+    &.absolute{
+        position: absolute;
+        min-width: 100px;
+        bottom: 40px;
+        left: auto;
+        right: auto;
+    }
+}
+
