@@ -2,60 +2,89 @@
 <html lang="en">
     
     <head>
-        <title>Formularz</title>
+        <title>Gaming Ventures</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
-        <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-        rel="stylesheet" />-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        rel="stylesheet" />
         <link rel="stylesheet" href="./dist/assets/css/main.min.css">
-        <!-- <link rel="icon" href="../../dist/assets/img/favicon.png">-->
-        <!-- <script src="https://kit.fontawesome.com/241cd5ebad.js"></script>-->
+        <link rel="icon" href="./dist/assets/img/logo.png">
+        <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+        <meta property="og:image" content="./dist/assets/img/logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1024">
+        <meta property="og:image:height" content="1024">
         <script>
             app = {}
         </script>
     </head>
     
     <body>
-        <div class="page-limiter">
-            <div class="fcf-body">
-                <div id="fcf-form">
-                     <h3 class="fcf-h3">Contact us</h3>
+        <div class="header">
+            <div class="container"> <a href="./index.html" class="logo"><img class="logo-image" src="./dist/assets/img/logo.png" alt="Gaming Ventures"></a>
 
-                    <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
-                        <div class="fcf-form-group">
-                            <label for="Name" class="fcf-label">Your name</label>
-                            <div class="fcf-input-group">
-                                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
-                            </div>
-                        </div>
-                        <div class="fcf-form-group">
-                            <label for="Email" class="fcf-label">Your email address</label>
-                            <div class="fcf-input-group">
-                                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
-                            </div>
-                        </div>
-                        <div class="fcf-form-group">
-                            <label for="Message" class="fcf-label">Your message</label>
-                            <div class="fcf-input-group">
-                                <textarea id="Message" name="Message" class="fcf-form-control" rows="6"
-                                maxlength="3000" required></textarea>
-                            </div>
-                        </div>
-                        <div class="fcf-form-group">
-                            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
-                        </div>
-                        <!-- <div class="fcf-credit" id="fcf-credit">-->
-                        <!-- Simple HTML email form provided by: <a href="https://www.freecontactform.com"
-                        target="_blank">FreeContactForm.com</a>-->
-                        <!-- </div>-->
-                    </form>
+                <div
+                class="menuBtnContainer">
+                    <button class="menuToggle nav-icon1"> <span></span>
+ <span></span>
+ <span></span>
+
+                    </button>
+            </div>
+        </div>
+        <div class="topMenu">
+            <ul>
+                <li><a href="./index.html" class="nav-el">O nas</a>
+                </li>
+                <li><a href="./gra.html" class="nav-el">Zgłoś grę</a>
+                </li>
+                <li><a href="./kontakt.html" class="nav-el">Kontakt</a>
+                </li>
+            </ul>
+            <div class="footer">&copy; Copyright 2020 All Rights Reserved
+                <br>Weronika Woszczek</div>
+        </div>
+        </div>
+        <div class="page-limiter">
+            <div class="text-carousel">
+                <div class="carousel-el">
+                    <img class="logo-image" src="./dist/assets/img/logo.png" alt="Gaming Ventures">
+                    <p>Gaming Ventures jest obecna na rynku od 2019 r. Od początku swojej działalności
+                        koncentruje się na inwestowaniu w projekty w branży gamingowej.</p>
+                </div>
+                <div class="carousel-el">
+                    <img class="logo-image" src="./dist/assets/img/strategy.png" alt="Gaming Ventures">
+                    <p>Gaming Ventures posiada udziały w licznych spółkach z branży gier wideo.
+                        Wykorzystując swoje doświadczenie spółka dąży do dywersyfikacji posiadanego
+                        przez spółkę portfela inwestycji.</p>
+                </div>
+                <div class="carousel-el">
+                    <img class="logo-image" src="./dist/assets/img/knowhow.png" alt="Gaming Ventures">
+                    <p>Dodatkowo współpracujemy ze studiami gamingowymi dzieląc się swoim know-how,
+                        a naszym celem jest zapewnienie profesjonalnego wsparcia dostosowanego
+                        do indywidualnych potrzeb naszych partnerów biznesowych.</p>
+                </div>
+                <div class="carousel-el">
+                    <img class="logo-image" src="./dist/assets/img/youngdev.png" alt="Gaming Ventures">
+                    <p>Wspieramy młode zespoły deweloperskie merytorycznie i operacyjnie. Pomagamy
+                        zarówno na etapie pozyskania kapitału dla spółek z ograniczoną odpowiedzialnością,
+                        a także stricte przy projektach gamingowych oferując wsparcie, np. przy
+                        tworzeniu preprodukcji czy wydawaniu gier.</p>
+                </div>
+                <div class="carousel-el">
+                    <img class="logo-image" src="./dist/assets/img/network.png" alt="Gaming Ventures">
+                    <p>Dzięki rozległej sieci kontaktów Gaming Ventures jest wartościowym partnerem
+                        biznesowym dla młodych podmiotów w branży gamingowej.</p>
                 </div>
             </div>
-            <script src="./dist/assets/js/libs/jquery.js"></script>
-            <script src="./dist/assets/js/common.js"></script>
-            <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+        </div>
+        <script src="./dist/assets/js/libs/jquery.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script src="./dist/assets/js/common.js"></script>
     </body>
 
 </html>

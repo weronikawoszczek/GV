@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GV</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"/>
+    <link rel="stylesheet" href="./dist/assets/css/main.min.css">
+    <link rel="icon" href="./dist/assets/img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+    <meta property="og:image" content="./dist/assets/img/mini.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <script>
+        app = {}
+    </script>
+</head>
+<!--<partial src="_head.html"></partial>-->
+<body>
+<div class="page-limiter">
+
+    <div class="fcf-body">
+
+        <div id="fcf-form">
+            <h3 class="fcf-h3">Contact us</h3>
+
+            <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+
+                <div class="fcf-form-group">
+                    <label for="Name" class="fcf-label">Your name</label>
+                    <div class="fcf-input-group">
+                        <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                    </div>
+                </div>
+
+                <div class="fcf-form-group">
+                    <label for="Email" class="fcf-label">Your email address</label>
+                    <div class="fcf-input-group">
+                        <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                    </div>
+                </div>
+
+                <div class="fcf-form-group">
+                    <label for="Message" class="fcf-label">Your message</label>
+                    <div class="fcf-input-group">
+                        <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000"
+                                  required></textarea>
+                    </div>
+                </div>
+
+                <div class="fcf-form-group">
+                    <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send
+                        Message
+                    </button>
+                </div>
+
+                <!--                <div class="fcf-credit" id="fcf-credit">-->
+                <!--                    Simple HTML email form provided by: <a href="https://www.freecontactform.com" target="_blank">FreeContactForm.com</a>-->
+                <!--                </div>-->
+            </form>
+        </div>
+
+    </div>
+    <partial src="_footer.html"></partial>
+</div>
+</body>
+</html>

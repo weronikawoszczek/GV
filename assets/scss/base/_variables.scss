@@ -1,17 +1,19 @@
-$main: 				#195C50;
-$main--light: 		#F6F6F6;
+$main: 				#045966;
+$main--light: 		#A89A91;
+$main--lighter: #f2e4d7;
 $main--light-darker: darken($main--light, 20%);
 $main--dark: 		#10352d;
 
-$aux: rgba(212, 189, 78, 0.9);
-$aux-darker:		darken($aux, 20%);
-$aux-dark: 			darken($aux, 35%);
+$aux: 				#CCB089;
 $aux-light: 		lighten($aux, 10%);
+$aux-dark:			darken($aux, 20%);
+$aux-darker: 		darken($aux, 35%);
 
-$accent: 			rgba(130, 180, 139, 0.8);
-$accent-light: 		rgba(130, 180, 139, 0.4);
-$accent-dark: 		rgb(130, 180, 139);
-$accent-vivid: 		rgba(171, 233, 187, 0.8);
+//$accent: 			rgba(130, 180, 139, 0.8);
+$accent: rgba(249, 203, 119, 0.79);
+$accent-light: 		lighten($accent, 10%);
+$accent-dark: 		darken($accent, 10%);
+$accent-vivid: 		lighten($accent, 10%);
 
 $desktop-width: 400px;
 $sm-width: 		250px;
