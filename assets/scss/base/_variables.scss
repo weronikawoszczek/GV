@@ -36,9 +36,15 @@ $sm-width: 		250px;
 	src: url('./../fonts/koliko-Regular.ttf');
 }
 
+@font-face {
+	font-family: 'Comm';
+	font-display: swap;
+	src: url('./../fonts/Comm.ttf');
+}
+
 $font-main:		'Roboto', Helvetica, Arial, sans-serif;
 $font-secondary:  'GloberRegular', Helvetica, Arial, sans-serif;
-$font-third:      'GloberBook', Helvetica, Arial, sans-serif;
+$font-third:      'Comm', Helvetica, Arial, sans-serif;
 
 
 $baseSize: 			16;

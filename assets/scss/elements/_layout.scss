@@ -1,6 +1,6 @@
 body {
   //font-size: $baseSize+px;
-  font-family: $font-secondary;
+  font-family: $font-third;
   color: $main--lighter;
   line-height: 140%;
   @include makeRem(40);
@@ -139,14 +139,14 @@ p {
   .slick-prev {
     left: -45px !important;
     @include media-breakpoint-down(sm) {
-      display: none;
+      display: none !important;
     }
   }
 
   .slick-next {
     right: -45px !important;
     @include media-breakpoint-down(sm) {
-      display: none;
+      display: none !important;
     }
   }
 
@@ -154,4 +154,8 @@ p {
     left: 50%;
     transform: translate(-50%, 30%);
   }
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 40px !important;
 }

@@ -64,3 +64,7 @@ $(function () {
         app.common.mainInit();
     })
 });
+
+$(window).on('scroll', function() {
+    checkScroll();
+});
