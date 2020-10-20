@@ -94,7 +94,7 @@ p {
   flex-direction: column;
   align-items: center;
   position: relative;
-  background: url(../img/bg4.jpg) no-repeat center bottom 6% fixed;
+  background: url(../img/bg.jpg) no-repeat center bottom 6% fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -109,10 +109,14 @@ p {
   max-height: 90%;
   box-shadow: 5px 5px 40px -15px #000000;
   background-color: rgba(0, 0, 0, .1);
+  opacity: 1;
 
   @include media-breakpoint-down(sm) {
     max-width: 90%;
     padding: 15px;
+    &.hidden{
+      opacity: 0;
+    }
   }
 
   .carousel-el {
