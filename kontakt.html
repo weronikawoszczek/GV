@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -25,51 +25,74 @@
 </head>
 <!--<partial src="_head.html"></partial>-->
 <body>
+
+<div class="header">
+    <div class="container">
+        <a href="./index.html" class="logo"><img class="logo-image" src="./dist/assets/img/logo.png" alt="Gaming Ventures"></a>
+        <div class="headerMenu">
+            <a href="./index.html" class="nav-el">O nas</a>
+            <a href="./gra.html" class="nav-el">Zgłoś grę</a>
+            <a href="./kontakt.html" class="nav-el">Kontakt</a>
+        </div>
+        <div class="menuBtnContainer">
+            <button class="menuToggle nav-icon1">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+    <div class="topMenu">
+        <ul>
+            <li><a href="./index.html" class="nav-el">O nas</a></li>
+            <li><a href="./gra.html" class="nav-el">Zgłoś grę</a></li>
+            <li><a href="./kontakt.html" class="nav-el">Kontakt</a></li>
+        </ul>
+        <div class="footer">
+            &copy; Copyright 2020 All Rights Reserved<br>
+            Weronika Woszczek
+        </div>
+    </div>
+</div>
+
 <div class="page-limiter">
 
-    <div class="fcf-body">
+    <div class="form-wrapper">
+        <h3>Contact us</h3>
 
-        <div id="fcf-form">
-            <h3 class="fcf-h3">Contact us</h3>
+        <form id="fcf-form-id" method="post" action="contact-form-process.php">
 
-            <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
-
-                <div class="fcf-form-group">
-                    <label for="Name" class="fcf-label">Your name</label>
-                    <div class="fcf-input-group">
-                        <input type="text" id="Name" name="Name" class="fcf-form-control" required>
-                    </div>
+            <div class="form-group">
+                <label for="Name" class="fcf-label">Your name</label>
+                <div class="input-group">
+                    <input type="text" id="Name" name="Name" class="form-input" required>
                 </div>
+            </div>
 
-                <div class="fcf-form-group">
-                    <label for="Email" class="fcf-label">Your email address</label>
-                    <div class="fcf-input-group">
-                        <input type="email" id="Email" name="Email" class="fcf-form-control" required>
-                    </div>
+            <div class="form-group">
+                <label for="Email" class="fcf-label">Your email address</label>
+                <div class="input-group">
+                    <input type="email" id="Email" name="Email" class="form-input" required>
                 </div>
+            </div>
 
-                <div class="fcf-form-group">
-                    <label for="Message" class="fcf-label">Your message</label>
-                    <div class="fcf-input-group">
-                        <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000"
+            <div class="form-group">
+                <label for="Message" class="fcf-label">Your message</label>
+                <div class="input-group">
+                        <textarea id="Message" name="Message" class="form-input" rows="4" maxlength="3000"
                                   required></textarea>
-                    </div>
                 </div>
+            </div>
 
-                <div class="fcf-form-group">
-                    <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send
-                        Message
-                    </button>
-                </div>
-
-                <!--                <div class="fcf-credit" id="fcf-credit">-->
-                <!--                    Simple HTML email form provided by: <a href="https://www.freecontactform.com" target="_blank">FreeContactForm.com</a>-->
-                <!--                </div>-->
-            </form>
-        </div>
-
+            <div class="form-group">
+                <button type="submit" id="fcf-button" class="btn-class">Send
+                    Message
+                </button>
+            </div>
+        </form>
     </div>
-    <partial src="_footer.html"></partial>
-</div>
+    <script src="./dist/assets/js/libs/jquery.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="./dist/assets/js/common.js"></script></div>
 </body>
 </html>

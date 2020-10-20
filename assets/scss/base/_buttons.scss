@@ -3,22 +3,30 @@
     white-space: nowrap;
     vertical-align: middle;
     user-select: none;
-    border: 1px solid $aux-darker;
+    border: 1px solid $aux;
     padding: .7rem 1.5rem;
     @include makeRem(15);
     border-radius: 5px;
-    background-color: #fff;
-    color: $aux-darker;
+    background-color: white;
+    color: $aux;
     transition: background-color 0.2s;
     cursor: pointer;
-    margin: 10px 0 15px;
     font-size: 13px;
-    min-width: 120px;
-    &:hover, &:focus, &:active {
-        background-color: $aux-light;
+    min-width: 200px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0 auto;
+    display: block;
+    @include animate;
+    &:hover, &:focus, &:active, &.focus {
+        @include animate;
+        background-color: $aux--light;
+        outline: 0;
     }
     @include media-breakpoint-down(sm) {
-        width: 300px;
+        width: 100%;
     }
 
     &.alert{
