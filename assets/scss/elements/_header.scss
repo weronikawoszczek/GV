@@ -189,7 +189,7 @@
     opacity: 1;
     transform: translate(0, calc(100vh + 125px));
     @include media-breakpoint-down(sm) {
-      //transform: translate(0, calc(100vh + 106px));
+      transform: translate(0, 0);
       top: 106px;
     }
   }
