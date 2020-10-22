@@ -1,10 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>GV</title>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"/>
+    <link rel="stylesheet" href="./dist/assets/css/main.min.css">
+    <link rel="icon" href="./dist/assets/img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+    <meta property="og:image" content="./dist/assets/img/mini.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <script>
+        app = {}
+    </script>
 </head>
+<!--<partial src="_head.html"></partial>-->
 <body>
 
+<div class="header header-scroll">
+    <div class="container">
+        <a href="./index.html" class="logo"><img class="logo-image" src="./dist/assets/img/logo.png" alt="Gaming Ventures"></a>
+        <div class="headerMenu">
+            <a href="./index.html" class="nav-el">O nas</a>
+            <a href="./gra.html" class="nav-el">Zgłoś grę</a>
+            <a href="./kontakt.html" class="nav-el">Kontakt</a>
+        </div>
+        <div class="menuBtnContainer">
+            <button class="menuToggle nav-icon1">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+    <div class="topMenu">
+        <ul>
+            <li><a href="./index.html" class="nav-el">O nas</a></li>
+            <li><a href="./gra.html" class="nav-el">Zgłoś grę</a></li>
+            <li><a href="./kontakt.html" class="nav-el">Kontakt</a></li>
+        </ul>
+        <div class="footer">
+            &copy; Copyright 2020 All Rights Reserved<br>
+            Weronika Woszczek
+        </div>
+    </div>
+</div>
+
+<div class="page-limiter">
+
+    <div class="form-wrapper">
+        <h3>Zgłoś grę</h3>
+
+        <form method="post" action="gra-form-process.php">
+
+            <div class="form-group">
+                <label for="tytul" class="">Tytuł</label><span>*</span>
+                <div class="input-group">
+                    <input type="text" id="tytul" name="tytul" class="form-input" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Gatunek" class="">Gatunek</label>
+                <div class="input-group">
+                    <input type="text" id="Gatunek" name="Gatunek" placeholder="RPG" class="form-input">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Platforma" class="">Platforma</label><span>*</span>
+                <div class="input-group">
+                    <input type="text" id="Platforma" name="Platforma" class="form-input">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="premiera" class="">Planowana data premiery</label><span>*</span>
+                <div class="input-group">
+                    <input type="text" id="premiera" name="premiera" placeholder="dd/mm/yyyy" class="form-input">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="etap" class="">Etap prac</label><span>*</span>
+                <div class="input-group">
+                    <input type="text" id="etap" name="etap" class="form-input">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="opis" class="">Krótki opis fabuły i mechaniki</label><span>*</span>
+                <div class="input-group">
+                        <textarea id="opis" name="opis" class="form-input" rows="3" maxlength="5000"
+                                  required></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="rekomendacja" class="">Jak zarekomendowałbyś swoją produkcję?</label><span>*</span>
+                <div class="input-group">
+                        <textarea id="rekomendacja" name="rekomendacja" class="form-input" rows="3" maxlength="5000"
+                                  required></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cechy" class="">Główne cechy gry (USP)</label><span>*</span>
+                <div class="input-group">
+                        <textarea id="cechy" name="cechy" class="form-input" rows="3" maxlength="5000"
+                                  required></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="budzet" class="">Przewidywany budżet</label><span>*</span>
+                <div class="input-group">
+                    <input type="text" id="budzet" name="budzet" placeholder="... zł" class="form-input">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="miejsce" class="">Skąd jesteś?</label><span>*</span>
+                <div class="input-group">
+                    <input type="text" id="miejsce" name="miejsce" class="form-input">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="osoba" class="">Osoba kontaktowa</label><span>*</span>
+                <div class="input-group">
+                    <input type="text" id="osoba" name="osoba" class="form-input">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="Email" class="">Adres e-mail</label><span>*</span>
+                <div class="input-group">
+                    <input type="email" id="Email" name="Email" class="form-input" required>
+                </div>
+            </div>
+
+            Administratorem danych osobowych jest Falcon Games S.A., z siedzibą w Warszawie. Podane dane osobowe zbierane są w celu informacyjnym i nie będą udostępniane innym odbiorcom. Mają Państwo prawo dostępu do treści swoich danych oraz ich poprawiania. Podanie danych osobowych jest dobrowolne.
+
+            <div class="form-group margin-top">
+                <button type="submit" class="btn-class">
+                    Zgłoś grę
+                </button>
+            </div>
+        </form>
+    </div>
+    <script src="./dist/assets/js/libs/jquery.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="./dist/assets/js/common.js"></script></div>
 </body>
 </html>

@@ -9,13 +9,13 @@ app.common = {
 
             $(this).toggleClass('open');
             $('.topMenu').toggleClass('opened');
-            $('.carousel-el').toggleClass('hidden');
+            $('.carousel-el, .slick-dots, .form-wrapper').toggleClass('hidden');
 
             $(document).on('click', function closeMenu (){
                 if($('.topMenu').hasClass('opened')){
                     $('.topMenu').removeClass('opened');
                     $('.menuToggle').removeClass('open');
-                    $('.carousel-el').toggleClass('hidden');
+                    $('.carousel-el, .slick-dots, .form-wrapper').toggleClass('hidden');
 
                 } else {
                     $(document).on('click', closeMenu);

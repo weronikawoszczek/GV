@@ -27,11 +27,17 @@
   &-scroll {
     &.scrolled {
       opacity: .9;
-      padding-top: 25px;
-      padding-bottom: 25px;
+      padding-top: 15px;
+      padding-bottom: 15px;
 
       img {
-        width: 200px;
+        width: 50px;
+      }
+
+      .headerMenu{
+        a{
+          font-size: 15px;
+        }
       }
     }
   }

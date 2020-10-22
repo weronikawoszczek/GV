@@ -4,7 +4,7 @@
 
 .form-wrapper {
   font-family: -apple-system, Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   margin: 35px 0;
   padding: 35px;
@@ -15,14 +15,19 @@
   background-color: rgba(255, 255, 255, .3);
   background-image: linear-gradient(to bottom, rgba(182, 168, 158, .7), rgba(54, 52, 68, 0.77));
   display: flex;
-  color: lighten($main--light, 10%);
-  //color: $main--lighter;
+  //color: lighten($main--light, 10%);
+  color: $main--lighter;
+  opacity: 1;
   flex-direction: column;
   align-items: center;
 
   @include media-breakpoint-down(sm) {
     width: 80%;
     padding: 35px 10px;
+  }
+
+  &.hidden {
+    opacity: 0;
   }
 
   h3 {
@@ -47,11 +52,19 @@
     margin-bottom: 0;
   }
 
+  &.margin-top {
+    margin-top: 2.5rem;
+  }
+
   label {
     font-size: 1.7rem;
     font-weight: normal;
     color: $form-text;
     //color: #313131;
+  }
+
+  span {
+    margin-left: 5px;
   }
 
   .form-input {
@@ -88,6 +101,10 @@
   -ms-flex-align: stretch;
   align-items: stretch;
   width: 100%;
+
+  input::placeholder {
+    color: $main-light;
+  }
 }
 
 

@@ -18,7 +18,7 @@ img {
 a {
   color: $accent;
   text-decoration: none;
-  @include makeRem(38);
+  @include makeRem(35);
   @include animate;
 
   &:hover, &:focus, &:active {
@@ -166,6 +166,7 @@ p {
   .slick-dots {
     left: 50%;
     transform: translate(-50%, 30%);
+    opacity: 1;
 
     .slick-active {
       button:before {
@@ -174,6 +175,9 @@ p {
           color: black;
         }
       }
+    }
+    &.hidden{
+      opacity: 0;
     }
   }
 
