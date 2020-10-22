@@ -76,7 +76,7 @@ span {
 p {
   @include makeRem(35);
   line-height: 160%;
-  color: white;
+  color: $main--lighter;
   letter-spacing: .5px;
   @include media-breakpoint-down(sm) {
     line-height: 140%;
