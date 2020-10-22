@@ -30,6 +30,12 @@ app.common = {
             }
         });
 
+        $('.header .headerMenu a').each(function() {
+            if (this.href == window.location.href) {
+                $(this).toggleClass("checked");
+            }
+        });
+
         $('.nav-el').on('click', function(e) {
             $('.nav-el').removeClass('active');
             $(this).addClass('active');
@@ -40,7 +46,7 @@ app.common = {
             slidesToScroll: 1,
             infinite: true,
             autoplay: true,
-            autoplaySpeed: 5000,
+            autoplaySpeed: 4000,
             arrows: true,
             dots: true
         });
