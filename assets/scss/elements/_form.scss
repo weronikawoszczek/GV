@@ -105,22 +105,44 @@
   input::placeholder {
     color: $main-light;
   }
+
+  &.with-icon{
+    margin-bottom: 5px;
+    label {
+      color: $main--lighter;
+    }
+    i{
+      margin: 0 10px;
+      font-size: 25px;
+      width: 25px;
+      text-align: center;
+    }
+    img{
+      max-width: 25px;
+      height: 25px;
+      margin: 0 10px;
+      opacity: .9;
+    }
+    &:first-of-type{
+      margin-top: 5px;
+    }
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+
+  &.with-radio{
+    margin-bottom: 5px;
+    &:first-of-type{
+      margin-top: 5px;
+    }
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
 }
 
-
-//select.fcf-form-control[size], select.fcf-form-control[multiple] {
-//  height: auto;
-//}
-//
-//textarea.fcf-form-control {
-//  font-family: -apple-system, Arial, sans-serif;
-//  height: auto;
-//}
-
-
-//@media (prefers-reduced-motion: reduce) {
-//  .btn {
-//    transition: none;
-//  }
-//}
-
+.checkbox-input {
+  width: 20px;
+  margin: 0 10px 0 0;
+}

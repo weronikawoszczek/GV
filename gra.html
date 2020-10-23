@@ -15,6 +15,9 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
     <meta property="og:image" content="./dist/assets/img/mini.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1024">
@@ -23,7 +26,6 @@
         app = {}
     </script>
 </head>
-<!--<partial src="_head.html"></partial>-->
 <body>
 
 <div class="header header-scroll">
@@ -69,17 +71,63 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="Gatunek" class="">Gatunek</label>
+                <label for="gatunek" class="">Gatunek</label>
                 <div class="input-group">
-                    <input type="text" id="Gatunek" name="Gatunek" placeholder="RPG" class="form-input">
+                    <input type="text" id="gatunek" name="gatunek" placeholder="RPG" class="form-input">
                 </div>
             </div>
             <div class="form-group">
-                <label for="Platforma" class="">Platforma</label><span>*</span>
-                <div class="input-group">
-                    <input type="text" id="Platforma" name="Platforma" class="form-input">
+                <label>Platforma</label><span>*</span>
+
+                <div class="input-group with-icon">
+                    <input class="checkbox-input" type="checkbox" id="Windows" name="platform[]" value="Windows">
+                    <i class="fab fa-windows"></i>
+                    <label for="Windows">Windows</label>
+                </div>
+
+                <div class="input-group with-icon">
+                    <input class="checkbox-input" type="checkbox" id="Mac" name="platform[]" value="Mac">
+                    <i class="fab fa-apple"></i>
+                    <label for="Mac">MacOS</label>
+                </div>
+
+                <div class="input-group with-icon">
+                    <input class="checkbox-input" type="checkbox" id="iOS" name="platform[]" value="iOS">
+                    <i class="fab fa-app-store-ios"></i>
+                    <label for="iOS">iOS</label>
+                </div>
+
+                <div class="input-group with-icon">
+                    <input class="checkbox-input" type="checkbox" id="Android" name="platform[]" value="Android">
+                    <i class="fab fa-android"></i>
+                    <label for="Android">Android</label>
+                </div>
+
+                <div class="input-group with-icon">
+                    <input class="checkbox-input" type="checkbox" id="Linux" name="platform[]" value="Linux">
+                    <i class="fab fa-linux"></i>
+                    <label for="Linux">Linux</label>
+                </div>
+
+                <div class="input-group with-icon">
+                    <input class="checkbox-input" type="checkbox" id="PlayStation" name="platform[]" value="PlayStation">
+                    <i class="fab fa-playstation"></i>
+                    <label for="PlayStation">PlayStation</label>
+                </div>
+
+                <div class="input-group with-icon">
+                    <input class="checkbox-input" type="checkbox" id="Xbox" name="platform[]" value="Xbox">
+                    <i class="fab fa-xbox"></i>
+                    <label for="Xbox">Xbox</label>
+                </div>
+
+                <div class="input-group with-icon">
+                    <input class="checkbox-input" type="checkbox" id="Nintendo" name="platform[]" value="Nintendo">
+                    <img src="./dist/assets/img/nintendo3.png">
+                    <label for="Nintendo">Nintendo</label>
                 </div>
             </div>
+
             <div class="form-group">
                 <label for="premiera" class="">Planowana data premiery</label><span>*</span>
                 <div class="input-group">
@@ -87,9 +135,22 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="etap" class="">Etap prac</label><span>*</span>
-                <div class="input-group">
-                    <input type="text" id="etap" name="etap" class="form-input">
+                <label>Etap prac</label><span>*</span>
+                <div class="input-group with-radio">
+                    <input class="checkbox-input" type="radio" id="pomysl" name="etap" value="Pomysł">
+                    <label for="pomysl">Pomysł</label>
+                </div>
+                <div class="input-group with-radio">
+                    <input class="checkbox-input" type="radio" id="prototyp" name="etap" value="Prototyp">
+                    <label for="prototyp">Prototyp</label>
+                </div>
+                <div class="input-group with-radio">
+                    <input class="checkbox-input" type="radio" id="gotowa" name="etap" value="Gotowa do wprowadzenia na rynek">
+                    <label for="gotowa">Gotowa do wprowadzenia na rynek</label>
+                </div>
+                <div class="input-group with-radio">
+                    <input class="checkbox-input" type="radio" id="inny" name="etap" value="Inny">
+                    <label for="inny">Inny</label>
                 </div>
             </div>
 
@@ -135,9 +196,9 @@
             </div>
 
             <div class="form-group">
-                <label for="Email" class="">Adres e-mail</label><span>*</span>
+                <label for="email" class="">Adres e-mail</label><span>*</span>
                 <div class="input-group">
-                    <input type="email" id="Email" name="Email" class="form-input" required>
+                    <input type="email" id="email" name="email" class="form-input" required>
                 </div>
             </div>
 
