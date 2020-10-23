@@ -97,7 +97,7 @@ span {
 p {
   @include makeRem(35);
   line-height: 160%;
-  color: $main--lighter;
+  color: $main-lighter;
   letter-spacing: .5px;
   @include media-breakpoint-down(sm) {
     line-height: 140%;
@@ -123,7 +123,8 @@ p {
 .text-carousel {
   margin-top: 35px;
   padding: 35px;
-  max-width: 60%;
+  width: 60%;
+  max-width: 800px;
   max-height: 90%;
   box-shadow: 5px 5px 40px -15px #000000;
   background-color: rgba(0, 0, 0, .1);

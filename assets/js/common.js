@@ -49,7 +49,7 @@ app.common = {
             slidesToScroll: 1,
             infinite: true,
             autoplay: true,
-            autoplaySpeed: 4000,
+            autoplaySpeed: 4600,
             arrows: true,
             dots: true
         });
