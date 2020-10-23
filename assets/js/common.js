@@ -9,13 +9,16 @@ app.common = {
 
             $(this).toggleClass('open');
             $('.topMenu').toggleClass('opened');
-            $('.carousel-el, .slick-dots, .form-wrapper').toggleClass('hidden');
+            $('.carousel-el, .slick-dots, .form-wrapper, .slick-prev, .slick-next').toggleClass('hidden');
+            if( $('.header-scroll').hasClass('scrolled') ) {
+                $('.header-scroll').removeClass('scrolled');
+            }
 
             $(document).on('click', function closeMenu (){
                 if($('.topMenu').hasClass('opened')){
                     $('.topMenu').removeClass('opened');
                     $('.menuToggle').removeClass('open');
-                    $('.carousel-el, .slick-dots, .form-wrapper').toggleClass('hidden');
+                    $('.carousel-el, .slick-dots, .form-wrapper, .slick-prev, .slick-next').toggleClass('hidden');
 
                 } else {
                     $(document).on('click', closeMenu);
