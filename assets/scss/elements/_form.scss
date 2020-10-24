@@ -163,6 +163,10 @@
 
   &.with-radio{
     margin-bottom: 5px;
+    flex-wrap: nowrap;
+    label{
+      margin-left: 10px;
+    }
     &:first-of-type{
       margin-top: 5px;
     }

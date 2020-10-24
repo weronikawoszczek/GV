@@ -132,7 +132,7 @@ p {
 
   @include media-breakpoint-down(sm) {
     margin-top: 15px;
-    max-width: 80%;
+    width: 80%;
     padding: 15px;
 
   }
