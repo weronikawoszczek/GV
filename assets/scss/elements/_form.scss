@@ -6,7 +6,7 @@
   font-family: -apple-system, Arial, sans-serif;
   font-size: 1.2rem;
   line-height: 1.5;
-  margin: 35px 0;
+  margin: 55px 0 35px;
   padding: 35px;
   width: 60%;
   max-width: 864px;
@@ -25,6 +25,14 @@
   @include media-breakpoint-down(sm) {
     width: 80%;
     padding: 35px 10px;
+    margin-top: 45px;
+  }
+
+  &.contact {
+    margin-top: 10px;
+    @media (max-width: 1024px) {
+      margin-top: 0;
+    }
   }
 
   &.hidden {
@@ -107,19 +115,23 @@
     color: $main-light;
   }
 
-  &.with-icon{
+  &.with-icon {
     margin-bottom: 10px;
     align-items: center;
-    input{
+
+    input {
       cursor: pointer;
       margin: 0;
     }
+
     input[type="checkbox"]:checked + label {
       color: white;
-      img{
+
+      img {
         filter: grayscale(1);
       }
     }
+
     label {
       color: $main--lighter;
       cursor: pointer;
@@ -128,23 +140,27 @@
       margin: 0;
       line-height: 1;
       @include animate;
-      &:hover{
+
+      &:hover {
         color: white;
         @include animate;
-        img{
+
+        img {
           @include animate;
           filter: grayscale(1);
         }
       }
     }
-    i{
+
+    i {
       margin: 0 10px;
       font-size: 25px;
       width: 25px;
       text-align: center;
       cursor: pointer;
     }
-    img{
+
+    img {
       max-width: 25px;
       height: 25px;
       margin: 0 10px;
@@ -153,24 +169,29 @@
       filter: grayscale(0);
       @include animate;
     }
-    &:first-of-type{
+
+    &:first-of-type {
       margin-top: 5px;
     }
-    &:last-of-type{
+
+    &:last-of-type {
       margin-bottom: 0;
     }
   }
 
-  &.with-radio{
+  &.with-radio {
     margin-bottom: 5px;
     flex-wrap: nowrap;
-    label{
+
+    label {
       margin-left: 10px;
     }
-    &:first-of-type{
+
+    &:first-of-type {
       margin-top: 5px;
     }
-    &:last-of-type{
+
+    &:last-of-type {
       margin-bottom: 0;
     }
   }

@@ -118,6 +118,14 @@ p {
   position: relative;
   overflow-x: hidden;
   padding-top: 125px;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    top: -15px;
+  }
+  @include media-breakpoint-down(sm) {
+    top: -25px;
+  }
 }
 
 .text-carousel {
