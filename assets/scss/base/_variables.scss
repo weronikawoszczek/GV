@@ -24,34 +24,12 @@ $desktop-width: 400px;
 $sm-width: 		250px;
 
 @font-face {
-	font-family: 'GloberBook';
-	font-display: swap;
-	src: url('./../fonts/GloberBook.otf');
-}
-
-@font-face {
-	font-family: 'GloberRegular';
-	font-display: swap;
-	src: url('./../fonts/GloberRegular.otf');
-}
-
-@font-face {
-	font-family: 'Koliko';
-	font-display: swap;
-	src: url('./../fonts/koliko-Regular.ttf');
-}
-
-@font-face {
 	font-family: 'Comm';
 	font-display: swap;
 	src: url('./../fonts/Comm.ttf');
 }
 
-$font-main:		'Roboto', Helvetica, Arial, sans-serif;
-$font-secondary:  'GloberRegular', Helvetica, Arial, sans-serif;
-$font-third:      'Comm', Helvetica, Arial, sans-serif;
-
-
+$font-main:      'Comm', Helvetica, Arial, sans-serif;
 $baseSize: 			16;
 $whitespace:		30px;
 

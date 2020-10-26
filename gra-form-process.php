@@ -17,7 +17,6 @@ if (isset($_POST['Email'])) {
     // validation expected data exists
     if (
         !isset($_POST['tytul']) ||
-        !isset($_POST['gatunek']) ||
         !(isset($_POST['platform']) && is_array($_POST['platform']) && count($_POST['platform']) > 0) ||
         !isset($_POST['premiera']) ||
         !isset($_POST['etap']) ||
