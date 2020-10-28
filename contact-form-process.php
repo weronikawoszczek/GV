@@ -2,7 +2,8 @@
 if (isset($_POST['Email'])) {
 
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "you@yourdomain.com";
+//     $email_to = "biuro@gamingventures.pl";
+    $email_to = "woszczekwerka@gmail.com";
     $email_subject = "Wiadomość z formularza kontaktowego Gaming Ventures";
 
     function problem($error)
