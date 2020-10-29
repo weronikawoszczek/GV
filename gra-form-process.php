@@ -1,9 +1,13 @@
-<?php
-if (isset($_POST['Email'])) {
+<link rel="stylesheet" href="./dist/assets/css/main.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    // EDIT THE 2 LINES BELOW AS REQUIRED
-//     $email_to = "biuro@gamingventures.pl";
-    $email_to = "woszczekwerka@gmail.com";
+<body style="display: flex; justify-content: center; align-items: center; flex-direction: column; color: #2a2937; height: 100vh; font-size: 1.7rem; padding: 15px; text-align: center;">
+
+<?php
+if (isset($_POST['email'])) {
+    $email_to = "biuro@gamingventures.pl";
+#    $email_to = "woszczekwerka@gmail.com";
     $email_subject = "Zgłoszenie gry";
 
     function problem($error)
@@ -27,19 +31,25 @@ if (isset($_POST['Email'])) {
         !isset($_POST['budzet']) ||
         !isset($_POST['miejsce']) ||
         !isset($_POST['osoba']) ||
-        !isset($_POST['email']) ||
-
+        !isset($_POST['email'])
         )
     {
         problem('We are sorry, but there appears to be a problem with the form you submitted.');
     }
 
-    $tytul = $_POST['tytul']; // required
-    $gatunek = $_POST['gatunek']; // required
-    $platform = implode(', ', $_POST['platform']);
+    $name = $_POST['platform'];
+
+    $platforms = array();
+    foreach($name as $platform)
+    {array_push($platforms,$platform);}
+    
+    $string_platforms = implode(", ", $platforms);
+        
+    $tytul = $_POST['tytul'];
+    $gatunek = $_POST['gatunek'];
     $premiera = $_POST['premiera'];
     $etap = $_POST['etap'];
-    $etap = $_POST['opis'];
+    $opis = $_POST['opis'];
     $rekomendacja = $_POST['rekomendacja'];
     $cechy = $_POST['cechy'];
     $budzet = $_POST['budzet'];
@@ -57,13 +67,6 @@ if (isset($_POST['Email'])) {
 
     $string_exp = "/^[A-Za-z .'-]+$/";
 
-    if (!preg_match($string_exp, $name)) {
-        $error_message .= 'The Name you entered does not appear to be valid.<br>';
-    }
-
-    if (strlen($message) < 2) {
-        $error_message .= 'The Message you entered do not appear to be valid.<br>';
-    }
 
     if (strlen($error_message) > 0) {
         problem($error_message);
@@ -79,14 +82,14 @@ if (isset($_POST['Email'])) {
 
     $email_message .= "Tytuł: " . clean_string($tytul) . "\n";
     $email_message .= "Gatunek: " . clean_string($gatunek) . "\n";
-    $email_message .= "Platforma: " . clean_string($platfrom) . "\n";
+    $email_message .= "Platforma: " . clean_string($string_platforms) . "\n";
     $email_message .= "Planowana data premiery: " . clean_string($premiera) . "\n";
     $email_message .= "Etap prac: " . clean_string($etap) . "\n";
     $email_message .= "Krótki opis fabuły i mechaniki: " . clean_string($opis) . "\n";
-    $email_message .= "Jak zarekomendowałbyś swoją produkcję? " . clean_string($rekomendacja) . "\n";
-    $email_message .= "Główne cechy gry (USP) " . clean_string($cechy) . "\n";
+    $email_message .= "Jak zarekomendowałbyś swoją produkcję: " . clean_string($rekomendacja) . "\n";
+    $email_message .= "Główne cechy gry (USP): " . clean_string($cechy) . "\n";
     $email_message .= "Przewidywany budżet: " . clean_string($budzet) . "\n";
-    $email_message .= "Skąd jesteś? " . clean_string($miejsce) . "\n";
+    $email_message .= "Skąd jesteś: " . clean_string($miejsce) . "\n";
     $email_message .= "Osoba kontaktowa: " . clean_string($osoba) . "\n";
     $email_message .= "Email: " . clean_string($email) . "\n";
 
@@ -94,13 +97,18 @@ if (isset($_POST['Email'])) {
     $headers = 'From: ' . $email . "\r\n" .
         'Reply-To: ' . $email . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
-    @mail($email_to, $email_subject, $email_message, $headers);
+        
+    mail($email_to, $email_subject, $email_message);
 ?>
 
-    <!-- include your success message below -->
-
-    Thank you for contacting us. We will be in touch with you very soon.
+    
+    <p>Thank you for contacting us. We will be in touch with you very soon.</p>
 
 <?php
 }
 ?>
+
+<a href="index.html" class="back-class">Go back</a>
+
+</body>
+

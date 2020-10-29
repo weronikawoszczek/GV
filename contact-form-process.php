@@ -1,10 +1,13 @@
+<link rel="stylesheet" href="./dist/assets/css/main.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<body style="display: flex; justify-content: center; align-items: center; flex-direction: column; color: #2a2937; height: 100vh; font-size: 1.7rem; padding: 15px; text-align: center;">
 <?php
 if (isset($_POST['Email'])) {
 
-    // EDIT THE 2 LINES BELOW AS REQUIRED
-//     $email_to = "biuro@gamingventures.pl";
-    $email_to = "woszczekwerka@gmail.com";
-    $email_subject = "Wiadomość z formularza kontaktowego Gaming Ventures";
+    $email_to = "biuro@gamingventures.pl";
+    $email_subject = "Formularz kontaktowy Gaming Ventures";
 
     function problem($error)
     {
@@ -61,17 +64,20 @@ if (isset($_POST['Email'])) {
     $email_message .= "Email: " . clean_string($email) . "\n";
     $email_message .= "Message: " . clean_string($message) . "\n";
 
-    // create email headers
     $headers = 'From: ' . $email . "\r\n" .
         'Reply-To: ' . $email . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
-    @mail($email_to, $email_subject, $email_message, $headers);
+    @mail($email_to, $email_subject, $email_message);
+
+
 ?>
 
-    <!-- include your success message below -->
-
-    Thank you for contacting us. We will be in touch with you very soon.
+    <p>Thank you for contacting us. We will be in touch with you very soon.</p>
 
 <?php
 }
 ?>
+<br>
+<a href="index.html" class="back-class">Go back</a>
+
+</body>
