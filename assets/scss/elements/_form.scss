@@ -4,6 +4,7 @@
   line-height: 1.5;
   margin: 55px 0 35px;
   padding: 35px;
+  z-index: 200;
   width: 60%;
   max-width: 864px;
   max-height: 90%;
@@ -11,6 +12,7 @@
   box-shadow: 5px 5px 60px -15px #000000;
   background-color: rgba(255, 255, 255, .3);
   background-image: linear-gradient(to bottom, rgba(182, 168, 158, .7), rgba(54, 52, 68, 0.77));
+  //background-image: linear-gradient(to bottom, rgba(255, 255, 255, .7), rgba(6, 89, 79, 0.77));
   display: flex;
   //color: lighten($main--light, 10%);
   color: $main--lighter;

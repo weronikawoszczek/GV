@@ -23,6 +23,14 @@ body {
   }
 }
 
+.video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
 // responsive images
 img {
@@ -44,7 +52,7 @@ a {
   }
 
   &.checked {
-    color: $main--light;
+    color: $main--lighter;
   }
 }
 
@@ -134,8 +142,21 @@ p {
   max-width: 800px;
   max-height: 90%;
   box-shadow: 5px 5px 40px -15px #000000;
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(0, 0, 0, .4);
   opacity: 1;
+  -webkit-animation: linear;
+  -webkit-animation-name: bgcolor;
+  -webkit-animation-duration: 7s;
+  animation-iteration-count: 1;
+
+  @-webkit-keyframes bgcolor {
+    0% {
+      background-color: rgba(0, 0, 0, .1);
+    }
+    100% {
+      background-color: rgba(0, 0, 0, .4);
+    }
+  }
 
   @include media-breakpoint-down(sm) {
     margin-top: 15px;

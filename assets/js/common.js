@@ -53,6 +53,9 @@ app.common = {
             arrows: true,
             dots: true
         });
+
+        $('.video').playbackRate = 0.1;
+
     }
 }
 
