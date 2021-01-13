@@ -54,7 +54,7 @@ app.common = {
             dots: true
         });
 
-        $('.video').playbackRate = 0.1;
+        // $('.video').playbackRate = 0.1;
 
     }
 }
